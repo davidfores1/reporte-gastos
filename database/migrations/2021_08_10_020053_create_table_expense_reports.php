@@ -14,7 +14,7 @@ class CreateTableExpenseReports extends Migration
     public function up()
     {
         Schema::create('expense_reports', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->timestamps();
         });
     }

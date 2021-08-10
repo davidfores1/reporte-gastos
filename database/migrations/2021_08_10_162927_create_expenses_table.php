@@ -14,11 +14,13 @@ class CreateExpensesTable extends Migration
     public function up()
     {
         Schema::create('expenses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->unsignedBigInteger('expense_report_id');
             $table->text('description');
             $table->decimal('amount');
             $table->timestamps();
+            
+            $table->foreign('expense_report_id')->references('id')->on('expense_reports');
         });
     }
 
