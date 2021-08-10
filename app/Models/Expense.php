@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Expense extends Model
 {
-    use HasFactory;
+    // use HasFactory;
 
-    public function expensesReport(){
+    public function expenseReport(){
         return $this->belongsTo(ExpenseReport::class);
     }
 }
