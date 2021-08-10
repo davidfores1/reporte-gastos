@@ -28,3 +28,8 @@ Route::get('/expense_reports/{id}/confirmDelete', [ExpenseReportController::clas
 Route::get('/expense_reports/{expense_report}/expenses/create', [ExpenseController::class, 'create']);
 
 Route::post('/expense_reports/{expense_report}/expenses', [ExpenseController::class, 'store']);
+
+Route::get('/expense_reports/{id}/confirmSendEmail', [ExpenseReportController::class, 'confirmSendEmail']);
+
+Route::post('/expense_reports/{id}/sendEmail', [ExpenseReportController::class, 'sendEmail']);
+
